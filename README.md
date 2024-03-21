@@ -3,7 +3,7 @@ Test assessment showcasing Calendar component built with React Native, Expo stac
 
 ## Screencast
 
-Screencast showcasing app: https://drive.google.com/file/d/1ufZ4j2OQY1EHyHBVy8IUElEkHNh4QH4d/view?usp=sharing
+Screencast showcasing app: https://drive.google.com/file/d/1uHA4p4fd1kKnRBJ_mEtQ7xKqAh3RtU0c/view?usp=sharing
 
 ## Get Started
 
