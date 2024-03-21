@@ -11,7 +11,14 @@ import {
   subMonths
 } from "date-fns"
 import { type FC, type ReactNode, useState } from "react"
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native"
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  useWindowDimensions,
+  View
+} from "react-native"
 
 import {
   CALENDAR_BORDER,
@@ -107,30 +114,26 @@ const Calendar: FC = () => {
     <View style={[styles.fullW, styles.calendarWrapper]}>
       <View style={[styles.row, styles.header]}>
         <View style={[styles.row, styles.dateNavigationWrapper]}>
-          <Pressable>
-            <Text style={styles.month}>{format(activeDate, "MMMM")}</Text>
-          </Pressable>
-          <Pressable>
-            <Text style={styles.year}>{format(activeDate, "yyyy")}</Text>
-          </Pressable>
+          <Text style={styles.month}>{format(activeDate, "MMMM")}</Text>
+          <Text style={styles.year}>{format(activeDate, "yyyy")}</Text>
         </View>
         <View style={[styles.row, styles.monthNavigationWrapper]}>
-          <Pressable
+          <TouchableOpacity
             hitSlop={7}
             onPress={() => {
               setActiveDate(subMonths(activeDate, 1))
             }}
           >
             <ArrowIcon style={styles.turnLeft} />
-          </Pressable>
-          <Pressable
+          </TouchableOpacity>
+          <TouchableOpacity
             hitSlop={7}
             onPress={() => {
               setActiveDate(addMonths(activeDate, 1))
             }}
           >
             <ArrowIcon />
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
 
